@@ -11,7 +11,7 @@ One Piece Suche
 
 How to start server:
 Simple Apache server as HTTP Daemon, via ruby on some port.
-for exampe
+for example
 
 ```
 ruby -run -e httpd . -p 555
