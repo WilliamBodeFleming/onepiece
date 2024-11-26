@@ -1,1 +1,18 @@
 <h1>Hello One Piece</h1>
+
+
+<label>Fruchtsuche:
+  <input type="text" oninput="searchFruits(this.value)"></input>
+</label>
+
+
+
+<script type="module">
+  let response = await fetch('https://api.api-onepiece.com/v2/fruits/en');
+  let fruits = await response.json();
+
+
+  window.searchFruits = function searchFruits(name) {
+    let filteredFruits = fruits.filter(fruit => fruit.name.toLowerCase().startsWith(name.toLowerCase()));
+  }
+</script>
